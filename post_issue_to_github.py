@@ -22,7 +22,7 @@ def post_to_github(title, description, jira_issue_id):
     github_repo = g.get_repo(repo)
     # TODO: add client label
     title = 'CLIENT ISSUE: {0}'.format(title)
-    description = '{0}\n\nJIRA Issue ID{1}'.format(description, jira_issue_id)
+    description = u'{0}\n\nJIRA Issue ID{1}'.format(description, jira_issue_id)
     return github_repo.create_issue(title, description)
 
 
